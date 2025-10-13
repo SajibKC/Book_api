@@ -6,5 +6,5 @@ type Book struct {
 	gorm.Model
 	Title  string
 	Author string
-	Price  int32
+	Price  float32
 }
