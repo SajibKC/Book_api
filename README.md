@@ -91,7 +91,7 @@ curl -X POST http://localhost:8080/book.v1.BookService/GetBook /\
 
 # 🖊️ Update a book
 curl -X POST http://localhost:8080/book.v1.BookService/UpdateBook /\
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/json" /\
   -d '{"id":"1","title":"AOT Updated","author":"Hajime Isayama","price":450}'
 
 # ❌ Delete a book
