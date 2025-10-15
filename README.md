@@ -74,8 +74,8 @@ Delete	book.v1.BookService/DeleteBook	Delete a book by ID
 
 # 📬 Example Requests (using curl)
 # ➕ Create a book
-curl -X POST http://localhost:8080/book.v1.BookService/CreateBook /\
-  -H "Content-Type: application/json" /\
+curl -X POST http://localhost:8080/book.v1.BookService/CreateBook \\
+  -H "Content-Type: application/json" \\
   -d '{"title":"Attack on Titan","author":"Hajime Isayama","price":400}'
 
 # 📖 List all books
