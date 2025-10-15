@@ -74,29 +74,29 @@ Delete	book.v1.BookService/DeleteBook	Delete a book by ID
 
 # 📬 Example Requests (using curl)
 # ➕ Create a book
-curl -X POST http://localhost:8080/book.v1.BookService/CreateBook \\
-  -H "Content-Type: application/json" \\
-  -d '{"title":"Attack on Titan","author":"Hajime Isayama","price":400}'
+curl -X POST -H "Content-Type: application/json" \\
+  -d '{"title":"AOT","author":"Hajime Isayama","price":500}' \\
+  http://localhost:8080/book.v1.BookService/CreateBook
 
 # 📖 List all books
 curl -X POST \
-  -H "Content-Type: application/json" /\
-  -d '{}' /\
+  -H "Content-Type: application/json" \\
+  -d '{}' \\
   http://localhost:8080/book.v1.BookService/ListBooks
 
 # 🔍 Get a book by ID
-curl -X POST http://localhost:8080/book.v1.BookService/GetBook /\
-  -H "Content-Type: application/json" /\
+curl -X POST http://localhost:8080/book.v1.BookService/GetBook \\
+  -H "Content-Type: application/json" \\
   -d '{"id":"1"}'
 
 # 🖊️ Update a book
-curl -X POST http://localhost:8080/book.v1.BookService/UpdateBook /\
-  -H "Content-Type: application/json" /\
+curl -X POST http://localhost:8080/book.v1.BookService/UpdateBook \\
+  -H "Content-Type: application/json" \\
   -d '{"id":"1","title":"AOT Updated","author":"Hajime Isayama","price":450}'
 
 # ❌ Delete a book
-curl -X POST http://localhost:8080/book.v1.BookService/DeleteBook /\
-  -H "Content-Type: application/json" /\
+curl -X POST http://localhost:8080/book.v1.BookService/DeleteBook \\
+  -H "Content-Type: application/json" \\
   -d '{"id":"1"}'
 
 # 🧰 Developer Notes
